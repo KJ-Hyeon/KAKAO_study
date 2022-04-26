@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/fragment_main"
+        android:title="홈"
+        android:icon="@drawable/ic_baseline_person_24"
+         />
+
+    <item android:id="@+id/fragment_chat"
+        android:title="채팅"
+        android:icon="@drawable/ic_baseline_chat_bubble_outline_24"
+         />
+
+    <item android:id="@+id/fragment_info"
+        android:title="인포"
+        android:icon="@drawable/ic_baseline_info_24"
+        />
+
+    <item android:id="@+id/fragment_shop"
+        android:title="쇼핑"
+        android:icon="@drawable/ic_baseline_shopping_bag_24"
+         />
+
+    <item android:id="@+id/fragment_else"
+        android:title="메뉴"
+        android:icon="@drawable/ic_baseline_menu_24"
+
+         />
+
+</menu>

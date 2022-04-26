@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragment_main">
+
+    <fragment
+        android:id="@+id/fragment_main"
+        android:name="com.jeong.android.kakao_clone.MainFragment"
+        android:label="MainFragment" />
+    <fragment
+        android:id="@+id/fragment_chat"
+        android:name="com.jeong.android.kakao_clone.ChatFragment"
+        android:label="ChatFragment" />
+    <fragment
+        android:id="@+id/fragment_else"
+        android:name="com.jeong.android.kakao_clone.ElseFragment"
+        android:label="ElseFragment" />
+    <fragment
+        android:id="@+id/fragment_info"
+        android:name="com.jeong.android.kakao_clone.InfoFragment"
+        android:label="InfoFragment" />
+    <fragment
+        android:id="@+id/fragment_shop"
+        android:name="com.jeong.android.kakao_clone.ShopFragment"
+        android:label="ShopFragment" />
+</navigation>
