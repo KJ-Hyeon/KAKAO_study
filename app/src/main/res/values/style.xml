@@ -23,4 +23,21 @@
     <style name="RoundImage">
         <item name="cornerSize">20dp</item>
     </style>
+
+    <style name="Name">
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">#616161</item>
+    </style>
+
+    <style name="Name.Bold">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Name_small">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#616161</item>
+    </style>
+
 </resources>

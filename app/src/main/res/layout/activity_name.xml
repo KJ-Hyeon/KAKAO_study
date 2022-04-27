@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:paddingHorizontal="8dp"
+    android:paddingVertical="12dp">
+
+    <ImageView
+        android:id="@+id/btn_cancle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/cancle"
+        app:layout_constraintEnd_toStartOf="@+id/tv_name"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintTop_toTopOf="@id/tv_name"
+        app:layout_constraintBottom_toBottomOf="@id/tv_name"/>
+
+    <TextView
+        android:id="@+id/tv_name"
+        style="@style/Name.Bold"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="이름"
+        app:layout_constraintEnd_toStartOf="@+id/tv_ok"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn_cancle"
+        app:layout_constraintHorizontal_weight="8"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_ok"
+        style="@style/Name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        app:layout_constraintHorizontal_weight="2"
+        android:text="확인"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tv_name"
+        app:layout_constraintTop_toTopOf="@id/tv_name"
+        app:layout_constraintBottom_toBottomOf="@id/tv_name"/>
+
+    <FrameLayout
+        android:id="@+id/frame_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_name"
+        android:layout_marginTop="15dp">
+
+        <EditText
+            android:id="@+id/name_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FFFFFF"
+            android:maxLength="20"
+            android:paddingVertical="20dp"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#616161" />
+
+        <ImageView
+            android:id="@+id/btn_clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/clear"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="46dp" />
+
+        <TextView
+            android:id="@+id/tv_length"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0 / 20"
+            android:textColor="#616161"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="8dp" />
+
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/set_name"
+        style="@style/Name_small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/frame_container"
+        android:layout_marginTop="8dp" />
+
+    <!--    <EditText-->
+    <!--        android:id="@+id/edit"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:backgroundTint="#FFFFFF"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        android:textColor="#FFFFFF"-->
+    <!--        app:layout_constraintTop_toTopOf="parent"-->
+    <!--        android:singleLine="true" />-->
+
+    <!--    <Button-->
+    <!--        android:id="@+id/btn_ok"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:text="확인"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent" />-->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

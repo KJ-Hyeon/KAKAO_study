@@ -1,3 +1,5 @@
 package com.jeong.android.kakao_clone
 
-data class Friend(val name: String, val img: Int)
+import java.io.Serializable
+
+data class Friend(var name: String, var img: Int):Serializable
