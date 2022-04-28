@@ -24,25 +24,25 @@ class ProfileActivity: AppCompatActivity() {
         val name = intent.getStringExtra("name")
         val img = intent.getIntExtra("img",0)
 
-        binding.tv.text = name
-        binding.img.setImageResource(img)
+        binding.tvName.text = name
+        binding.ivProfile.setImageResource(img)
 
         activityResultLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()){
             if (it.resultCode == RESULT_OK) {
                 if (!it.data?.getStringExtra("update_name").isNullOrEmpty()) {
                     update_name = it.data?.getStringExtra("update_name")
-                    binding.tv.text = update_name
+                    binding.tvName.text = update_name
                 }
             }
         }
 
-        binding.btn.setOnClickListener {
+        binding.nameLine.setOnClickListener {
             val intent = Intent(this, NameActivity::class.java)
-            intent.putExtra("name",name)
+            intent.putExtra("name",binding.tvName.text.toString())
             activityResultLauncher.launch(intent)
         }
 
-        binding.btn2.setOnClickListener {
+        binding.btnFinish.setOnClickListener {
             val result = Intent().apply {
                 putExtra("update_name",update_name)
             }

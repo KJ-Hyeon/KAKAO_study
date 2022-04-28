@@ -1,46 +1,129 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#85929a">
 
-    <TextView
-        android:id="@+id/tv"
+    <ImageView
+        android:id="@+id/btn_finish"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="프로필 창"
-        android:textSize="30sp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/finish"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_gift"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="15dp"
+        android:src="@drawable/gift"
+        app:layout_constraintEnd_toStartOf="@id/iv_money"
+        app:layout_constraintTop_toTopOf="@id/btn_finish" />
+
+    <ImageView
+        android:id="@+id/iv_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="15dp"
+        android:src="@drawable/money"
+        app:layout_constraintEnd_toStartOf="@id/iv_star"
+        app:layout_constraintTop_toTopOf="@id/btn_finish" />
+
+    <ImageView
+        android:id="@+id/iv_star"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="15dp"
+        android:src="@drawable/star"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        app:layout_constraintTop_toTopOf="@id/btn_finish" />
 
     <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/img"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:id="@+id/iv_profile"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv"
+        app:layout_constraintBottom_toTopOf="@id/name_Line"
+        android:layout_marginBottom="10dp"
         app:shapeAppearanceOverlay="@style/RoundImage"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        android:src="@drawable/user_image1"/>
 
-    <Button
-        android:id="@+id/btn"
+    <LinearLayout
+        android:id="@+id/name_Line"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="이름바꾸기"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/img" />
+        app:layout_constraintBottom_toTopOf="@id/divider"
+        android:layout_marginLeft="24dp"
+        android:layout_marginBottom="40dp"
+        android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/btn2"
-        android:layout_width="wrap_content"
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="사용자"
+            style="@style/HeadText" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/pen"
+            android:layout_marginLeft="3dp"
+            android:layout_gravity="center"/>
+
+
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="12dp"
+        android:background="#BDBDBD"
+        app:layout_constraintBottom_toTopOf="@id/bottom_Lin"
+        android:layout_marginBottom="18dp"/>
+
+    <LinearLayout
+        android:id="@+id/bottom_Lin"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="설정"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btn" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:orientation="horizontal"
+        android:layout_marginBottom="40dp"
+        android:weightSum="3">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/enter_chat"/>
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/call" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/kakao_story"/>
+
+
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
