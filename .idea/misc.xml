@@ -7,10 +7,12 @@
         <entry key="app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.2984375" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.2984375" />
         <entry key="app/src/main/res/drawable/menu_selector.xml" value="0.2984375" />
+        <entry key="app/src/main/res/drawable/recyclerview_background.xml" value="0.2984375" />
         <entry key="app/src/main/res/drawable/searchview_background.xml" value="0.2984375" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.17708333333333334" />
         <entry key="app/src/main/res/layout/activity_name.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_profile.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_search.xml" value="0.335" />
         <entry key="app/src/main/res/layout/fragment_chat.xml" value="0.17391304347826086" />
         <entry key="app/src/main/res/layout/fragment_else.xml" value="0.17391304347826086" />
         <entry key="app/src/main/res/layout/fragment_info.xml" value="0.17391304347826086" />

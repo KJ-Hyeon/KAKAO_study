@@ -42,8 +42,13 @@ class MainFragment: Fragment() {
         friend_list.add(Friend("김유리",R.drawable.user_image5))
         friend_list.add(Friend("김짱구",R.drawable.user_image6))
 
-        val adapter = FriendAdapter(friend_list,requireContext())
+        val adapter = FriendAdapter(friend_list)
         binding.friendRev.adapter = adapter
+
+        binding.mainIcon1.setOnClickListener {
+            val intent = Intent(requireContext(), SearchActivity::class.java)
+            startActivity(intent)
+        }
 
         activityResultLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()){ activityResult ->
             if (activityResult.resultCode == Activity.RESULT_OK) {
